@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apisuta | Sweet Profile 🌸</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Mitr', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffe4e1 0%, #ffd1dc 50%, #fff0f5 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #5c3d46;
+            overflow-x: hidden;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Floating Background Bubbles Effect */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            animation: floatUp 8s infinite ease-in-out;
+            bottom: -100px;
+            z-index: 1;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Sparkle Follower */
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            background: radial-gradient(circle, #fff 10%, #ffb6c1 100%);
+            border-radius: 50%;
+            animation: fadeSparkle 1s forwards ease-out;
+            z-index: 9999;
+        }
+
+        @keyframes fadeSparkle {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(0); opacity: 0; }
+        }
+
+        /* Main Container Card */
+        .container {
+            position: relative;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 182, 193, 0.6);
+            border-radius: 30px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(255, 182, 193, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(255, 105, 180, 0.3);
+        }
+
+        /* Avatar Container */
+        .avatar-box {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            color: white;
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+            border: 4px solid #fff;
+            animation: pulseGlow 3s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 15px #ffb6c1; }
+            100% { box-shadow: 0 0 30px #ff69b4; }
+        }
+
+        .badge-bow {
+            position: absolute;
+            top: -10px;
+            right: -5px;
+            font-size: 28px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 26px;
+            font-weight: 600;
+            color: #d63384;
+            margin-bottom: 5px;
+        }
+
+        .sub-title {
+            font-size: 14px;
+            color: #8c5365;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .bio-box {
+            background: rgba(255, 240, 245, 0.8);
+            border: 1.5px dashed #ffb6c1;
+            border-radius: 20px;
+            padding: 15px;
+            margin-bottom: 25px;
+            font-size: 14px;
+            color: #6a3b4c;
+            line-height: 1.6;
+        }
+
+        /* Tech Stack Chips */
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #c2185b;
+            margin-bottom: 12px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: #fff;
+            color: #d63384;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid #ffd1dc;
+            box-shadow: 0 4px 10px rgba(255, 182, 193, 0.2);
+            transition: all 0.2s;
+        }
+
+        .tag:hover {
+            background: #ff69b4;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Social Link Buttons */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #ffb6c1 0%, #ff8da1 100%);
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: 500;
+            box-shadow: 0 6px 15px rgba(255, 141, 161, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #ff8da1 0%, #ff69b4 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.5);
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #a86b7d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Background Bubbles -->
+    <div class="bubble" style="width: 40px; height: 40px; left: 10%; animation-duration: 7s;"></div>
+    <div class="bubble" style="width: 60px; height: 60px; left: 30%; animation-duration: 9s;"></div>
+    <div class="bubble" style="width: 25px; height: 25px; left: 70%; animation-duration: 6s;"></div>
+    <div class="bubble" style="width: 50px; height: 50px; left: 85%; animation-duration: 8s;"></div>
+
+    <!-- Main Card -->
+    <div class="container">
+        <div class="avatar-box">
+            <div class="avatar">
+                <i class="fa-solid fa-cat"></i>
+            </div>
+            <div class="badge-bow">🎀</div>
+        </div>
+
+        <h1>Apisuta Sanwong ✨</h1>
+        <div class="sub-title">ECP2R • Computer Engineering 🌸</div>
+
+        <div class="bio-box">
+            "Coding with passion, coffee, and cute energy! 🍓✨"
+            <br>
+            เขียนโค้ดด้วยความรัก เติมความสดใส และเวทมนตร์เล็กๆ น้อยๆ 💕
+        </div>
+
+        <div class="section-title">💖 Tech Stack & Skills</div>
+        <div class="tags">
+            <span class="tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+            <span class="tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            <span class="tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span class="tag"><i class="fa-brands fa-c"></i> C++</span>
+            <span class="tag"><i class="fa-brands fa-python"></i> Python</span>
+        </div>
+
+        <div class="social-links">
+            <a href="https://github.com/apisuta" class="btn" target="_blank">
+                <i class="fa-brands fa-github"></i> Visit My GitHub
+            </a>
+        </div>
+
+        <footer>
+            🐾 Crafted with Love & Pink Magic ✨
+        </footer>
+    </div>
+
+    <!-- Mouse Trail Sparkle Effect JavaScript -->
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            if (Math.random() < 0.2) { // ถี่ของละอองประกายดาว
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                
+                const size = Math.random() * 8 + 4;
+                sparkle.style.width = size + 'px';
+                sparkle.style.height = size + 'px';
+                
+                sparkle.style.left = (e.clientX - size / 2) + 'px';
+                sparkle.style.top = (e.clientY - size / 2) + 'px';
+                
+                document.body.appendChild(sparkle);
+
+                setTimeout(() => {
+                    sparkle.remove();
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>
