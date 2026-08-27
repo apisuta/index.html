@@ -6,60 +6,79 @@
 <title>apisuta 🌸 ✨</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
 
+<!-- ==========================================================================
+     ข้อมูลส่วนตัว (แก้ไขเฉพาะในกล่อง ME นี้)
+     ========================================================================== -->
 <script>
 const ME = {
-  name: "apisuta 🌸 ✨",
-  role: "นักศึกษาวิศวกรรมคอมพิวเตอร์ ปี 2 · มทร.อีสาน 🐰 🎀",
-  tagline: "Coding with passion, coffee, and cute bunny magic! 💖 ✨",
-  about: "สวัสดีค่ะ! ยินดีต้อนรับสู่พื้นที่เล็กๆ ของเรา ชอบการพัฒนาเว็บ UI/UX น่ารักๆ รักกระต่าย และการเรียนรู้เทคโนโลยีใหม่ๆ พร้อมเติมความหวานสดใสลงในทุกบรรทัดของโค้ดค่ะ 🎀 🐰 ✨",
-  
-  // รูปภาพด้านบนสุด ( Banner / Top Media )
-  topImage: "https://i.makeagif.com/media/8-28-2016/yD_T12.gif", 
-  
-  // รูปโปรไฟล์กระต่าย Snowball
-  avatarUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7hJ_3y4m-mZ0-aQ1d31S7k4jK_0g_g7L6gA&s",
 
+  // GitHub username ของคุณ
+  github: "apisuta-sanwong",
+
+  // ชื่อที่ต้องการให้แสดง
+  name: "apisuta 🌸 ✨",
+
+  // บอกว่าคุณคือใคร สั้น ๆ
+  role: "นักศึกษาวิศวกรรมคอมพิวเตอร์ ปี 2 · มทร.อีสาน 🐰 🎀",
+
+  // ประโยคความสนใจ
+  tagline: "Coding with passion, coffee, and cute bunny magic! 💖 ✨",
+
+  // แนะนำตัว 2-3 บรรทัด
+  about: "สวัสดีค่ะ! ยินดีต้อนรับสู่พื้นที่เล็กๆ ของเรา ชอบการพัฒนาเว็บ UI/UX น่ารักๆ รักกระต่าย และการเรียนรู้เทคโนโลยีใหม่ๆ พร้อมเติมความหวานสดใสลงในทุกบรรทัดของโค้ดค่ะ 🎀 🐰 ✨",
+
+  // รูปภาพ Banner ตรงกลางด้านบนสุด
+  topBannerUrl: "https://i.makeagif.com/media/8-28-2016/yD_T12.gif",
+
+  // รูปโปรไฟล์ (หากโหลดจาก GitHub ไม่สำเร็จ หรือยังไม่ได้เปลี่ยน username จะใช้รูปนี้เป็นหลัก)
+  customAvatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7hJ_3y4m-mZ0-aQ1d31S7k4jK_0g_g7L6gA&s",
+
+  // กำลังเรียนรู้อะไรอยู่ตอนนี้
   learning: [
     "🌸 HTML5 & CSS3 Advanced Styling",
     "🎀 JavaScript & React Web Development",
   ],
 
+  // ผลงาน
+  works: [],
+
+  // ช่องทางติดต่อ
   links: [
-    { label: "🌸 GitHub Profile", url: "https://github.com" },
+    { label: "🌸 GitHub Profile", url: "https://github.com/apisuta-sanwong" },
     { label: "💖 Instagram", url: "https://instagram.com" },
-  ]
+  ],
+
+  // ธีมสี
+  theme: "pink-sweet",
+
 };
 </script>
 
 <style>
-/* ---------- สีและสไตล์หลักตามหน้าจอ ---------- */
+/* ---------- สีพื้นฐาน และการปรับแต่งโทนสีชมพูพาสเทล ---------- */
 :root {
-  --bg-gradient: linear-gradient(180deg, #ffeef4 0%, #ffdbe6 50%, #ffeef4 100%);
-  --card-bg: rgba(255, 255, 255, 0.85);
-  --text-primary: #852e50;
-  --text-title: #611835;
-  --text-muted: #a85878;
-  --accent-pink: #ff6b9d;
-  --border-pink: #ffccd9;
+  --bg: #ffeef4;
+  --line: #ffccd9;
+  --text: #7a2646;
+  --muted: #a85878;
+  --accent: #ff6b9d;
+  --surface: rgba(255, 255, 255, 0.85);
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
 
-* { box-sizing: border-box; }
+*{ box-sizing:border-box }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  color: var(--text-primary);
+  margin: 0; min-height: 100vh; color: var(--text);
   font-family: "Segoe UI", "Noto Sans Thai", system-ui, sans-serif;
-  line-height: 1.6;
-  background: var(--bg-gradient);
+  line-height: 1.75;
+  background: linear-gradient(180deg, #ffeef4 0%, #ffdbe6 50%, #ffeef4 100%);
   position: relative;
   overflow-x: hidden;
-  display: flex;
-  justify-content: center;
 }
 
-/* ---------- เอฟเฟกต์จุดประกายแสงฟรุ้งฟริ้ง (Glow Sparks) ---------- */
-.sparkle-bg {
+/* ---------- เอฟเฟกต์จุดแสงประกายฟรุ้งฟริ้ง (Glow Sparks) ---------- */
+.sparkle-container {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
   pointer-events: none;
@@ -68,10 +87,10 @@ body {
 
 .sparkle {
   position: absolute;
-  width: 12px; height: 12px;
+  width: 10px; height: 10px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 0 12px 6px rgba(255, 182, 193, 0.8), 0 0 20px 10px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 12px 6px rgba(255, 182, 193, 0.8), 0 0 20px 8px rgba(255, 255, 255, 0.7);
   animation: pulse-glow 3s infinite ease-in-out;
 }
 
@@ -80,33 +99,24 @@ body {
   50% { opacity: 0.9; transform: scale(1.3); }
 }
 
-.s1 { top: 12%; left: 15%; animation-delay: 0s; }
-.s2 { top: 25%; left: 80%; animation-delay: 1s; }
-.s3 { top: 48%; left: 10%; animation-delay: 2s; }
-.s4 { top: 68%; left: 85%; animation-delay: 0.5s; }
-.s5 { top: 85%; left: 20%; animation-delay: 1.5s; }
+.sparkle:nth-child(1) { top: 12%; left: 15%; animation-delay: 0s; }
+.sparkle:nth-child(2) { top: 25%; left: 80%; animation-delay: 1s; }
+.sparkle:nth-child(3) { top: 50%; left: 10%; animation-delay: 2s; }
+.sparkle:nth-child(4) { top: 70%; left: 85%; animation-delay: 0.5s; }
+.sparkle:nth-child(5) { top: 85%; left: 20%; animation-delay: 1.5s; }
 
-/* ---------- คอนเทนเนอร์หลัก ---------- */
-.wrap {
-  width: 100%;
-  max-width: 680px;
-  padding: 30px 20px 60px;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* ความกว้างจำกัดไว้ */
+.wrap { max-width: 680px; margin: 0 auto; padding: 30px 22px 80px; position: relative; z-index: 1; }
 
-/* ---------- รูป Banner ด้านบน ---------- */
+/* ---------- Banner รูปภาพด้านบน ---------- */
 .top-banner {
   width: 180px;
   height: 110px;
+  margin: 0 auto 20px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 6px 15px rgba(168, 88, 120, 0.15);
-  margin-bottom: 25px;
   border: 3px solid #fff;
+  box-shadow: 0 6px 15px rgba(168, 88, 120, 0.15);
 }
 .top-banner img {
   width: 100%;
@@ -114,206 +124,279 @@ body {
   object-fit: cover;
 }
 
-/* ---------- ส่วนหัว (Header Profile) ---------- */
-.hero {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
+/* ---------- ส่วนหัว ---------- */
+.hero { display: flex; gap: 20px; align-items: center; padding: 10px 0 8px; flex-wrap: wrap; justify-content: center; }
 .avatar {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  border: 4px solid #fff;
+  width: 90px; height: 90px; border-radius: 50%;
+  border: 4px solid #fff; object-fit: cover; flex-shrink: 0;
+  background: var(--surface);
   box-shadow: 0 4px 14px rgba(255, 107, 157, 0.3);
-  object-fit: cover;
-  flex-shrink: 0;
 }
-
-.hero-text {
-  display: flex;
-  flex-direction: column;
+.avatar-fallback {
+  width: 90px; height: 90px; border-radius: 50%; flex-shrink: 0;
+  border: 4px solid #fff; background: var(--surface);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 38px; font-weight: 600; color: var(--accent);
+  box-shadow: 0 4px 14px rgba(255, 107, 157, 0.3);
 }
-
+.hero-text { flex: 1; min-width: 240px; }
 .role {
-  font-size: 13px;
-  font-weight: 600;
-  color: #c44d75;
-  margin: 0 0 4px;
+  font: 600 13px/1 var(--mono); letter-spacing: .05em;
+  color: #c44d75; margin: 0 0 6px;
 }
+h1 { font-size: clamp(28px, 5vw, 34px); line-height: 1.15; margin: 0 0 6px; letter-spacing: -.02em; color: #611835; font-weight: 700; }
+.tagline { font-size: 14px; font-weight: 600; color: #b04368; margin: 0; }
 
-h1 {
-  font-size: 32px;
-  margin: 0 0 4px;
-  color: var(--text-title);
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
-
-.tagline {
-  font-size: 14px;
-  font-weight: 600;
-  color: #b04368;
-  margin: 0;
-}
-
-/* ---------- กล่องแนะนำตัว (About Card) ---------- */
-.about-card {
-  background: var(--card-bg);
+.about {
+  color: var(--text);
+  margin: 16px 0 0;
+  background: var(--surface);
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 20px;
   padding: 18px 24px;
-  margin: 10px 0 20px;
   box-shadow: 0 8px 20px rgba(255, 182, 193, 0.25);
   backdrop-filter: blur(6px);
-  text-align: left;
-  width: 100%;
-  color: #7a2646;
   font-size: 14.5px;
 }
 
-/* ---------- ปุ่มลิงก์ (Links) ---------- */
-.links {
-  display: flex;
-  gap: 14px;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 35px;
-  justify-content: center;
-  width: 100%;
-}
-
+/* ---------- ปุ่มลิงก์ ---------- */
+.links { display: flex; flex-wrap: wrap; gap: 12px; padding: 0; margin: 24px 0 0; list-style: none; justify-content: center; }
 .links a {
-  display: inline-block;
+  display: inline-block; border: 1.5px solid var(--line); border-radius: 999px;
+  padding: 8px 22px; color: #9c3359; text-decoration: none; font-size: 13.5px; font-weight: 600;
   background: #ffffff;
-  border: 1.5px solid var(--border-pink);
-  border-radius: 25px;
-  padding: 8px 22px;
-  color: #9c3359;
-  font-weight: 600;
-  font-size: 13.5px;
-  text-decoration: none;
   box-shadow: 0 4px 10px rgba(255, 182, 193, 0.2);
-  transition: all 0.2s ease;
+  transition: all .2s ease;
 }
+.links a:hover, .links a:focus-visible { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); box-shadow: 0 6px 14px rgba(255, 107, 157, 0.3); }
 
-.links a:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent-pink);
-  box-shadow: 0 6px 14px rgba(255, 107, 157, 0.3);
-}
-
-/* ---------- หัวข้อส่วน (Section Heading) ---------- */
-section {
-  width: 100%;
-}
-
+/* ---------- หัวข้อของแต่ละส่วน ---------- */
+section { margin-top: 40px; }
 h2 {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #d15680;
-  border-bottom: 1.5px dashed var(--border-pink);
-  padding-bottom: 8px;
-  margin: 0 0 16px;
+  font: 700 11px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase;
+  color: #d15680; border-bottom: 1.5px dashed var(--line);
+  padding-bottom: 8px; margin: 0 0 16px;
 }
 
-/* ---------- รายการเรียนรู้ (Learning List) ---------- */
-.learning-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.learning-list li {
-  background: var(--card-bg);
-  border-left: 4px solid #ff6b9d;
-  padding: 12px 20px;
+/* ---------- รายการกำลังเรียนรู้ ---------- */
+.learning { list-style: none; padding: 0; margin: 0; }
+.learning li {
+  border-left: 4px solid var(--accent); padding: 12px 20px;
+  margin-bottom: 12px; color: #7d2446; font-weight: 600; font-size: 14px;
+  background: var(--surface);
   border-radius: 0 16px 16px 0;
-  font-size: 14px;
-  font-weight: 600;
-  color: #7d2446;
   box-shadow: 0 4px 12px rgba(255, 204, 217, 0.3);
+}
+
+/* ---------- ผลงาน ---------- */
+.works { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.work {
+  border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px;
+  background: var(--surface);
+  box-shadow: 0 4px 12px rgba(255, 204, 217, 0.3);
+}
+.work h3 { margin: 0 0 6px; font-size: 17px; color: #611835; }
+.work p { margin: 0; color: var(--muted); font-size: 14.5px; }
+.work a { color: var(--accent); text-decoration: none; font-size: 14px; display: inline-block; margin-top: 10px; font-weight: 600; }
+.work a:hover { text-decoration: underline; }
+.empty {
+  border: 1.5px dashed var(--line); border-radius: 16px; padding: 24px 20px;
+  color: var(--muted); text-align: center; font-size: 14.5px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ---------- แผงข้อมูลการเชื่อมต่อ ---------- */
+.panel { border: 1px solid var(--line); border-radius: 16px; background: var(--surface); padding: 4px 20px 16px; box-shadow: 0 4px 12px rgba(255, 204, 217, 0.3); }
+.row {
+  display: grid; grid-template-columns: minmax(130px, 1fr) minmax(0, 1.5fr); gap: 12px;
+  padding: 11px 0; border-bottom: 1px dashed var(--line); align-items: baseline;
+}
+.row:last-of-type { border-bottom: 0; }
+.row dt { color: var(--muted); font-size: 14px; margin: 0; font-weight: 600; }
+.row dd { margin: 0; font-family: var(--mono); font-size: 14px; color: var(--accent); word-break: break-all; font-weight: 600; }
+.row .note { display: block; color: var(--muted); font-family: inherit; font-size: 12.5px; font-weight: normal; }
+.hint { color: var(--muted); font-size: 13.5px; margin: 14px 0 0; }
+
+footer { margin-top: 56px; padding-top: 22px; border-top: 1.5px dashed var(--line); color: var(--muted); font-size: 13.5px; text-align: center; }
+footer a { color: var(--accent); font-weight: 600; }
+
+/* ---------- จอมือถือ ---------- */
+@media (max-width:520px){
+  .hero { padding-top: 10px; gap: 14px; }
+  .avatar, .avatar-fallback { width: 76px; height: 76px; font-size: 28px; }
+  .row { grid-template-columns: 1fr; gap: 2px; }
 }
 </style>
 </head>
 <body>
 
-<!-- แสงวิ้งๆ พื้นหลัง -->
-<div class="sparkle-bg">
-  <div class="sparkle s1"></div>
-  <div class="sparkle s2"></div>
-  <div class="sparkle s3"></div>
-  <div class="sparkle s4"></div>
-  <div class="sparkle s5"></div>
+<!-- เอฟเฟกต์จุดประกายฟรุ้งฟริ้ง -->
+<div class="sparkle-container">
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
 </div>
 
 <div class="wrap">
-  <!-- รูปภาพแบนเนอร์ด้านบนสุด -->
+
+  <!-- รูป Banner ด้านบน -->
   <div class="top-banner">
-    <img id="top-img" src="" alt="Banner">
+    <img id="topBanner" src="" alt="Top Banner">
   </div>
 
-  <!-- ส่วนหัวแสดงโปรไฟล์ -->
   <header class="hero">
-    <img class="avatar" id="avatar" alt="Avatar">
+    <img class="avatar" id="avatar" alt="" width="96" height="96">
     <div class="hero-text">
       <p class="role" id="role"></p>
       <h1 id="name"></h1>
       <p class="tagline" id="tagline"></p>
     </div>
   </header>
-
-  <!-- กล่องข้อความแนะนำตัว -->
-  <div class="about-card" id="about"></div>
-
-  <!-- รายการปุ่มลิงก์ -->
+  <p class="about" id="about"></p>
   <ul class="links" id="links"></ul>
 
-  <!-- ส่วนกำลังเรียนรู้ -->
   <section>
     <h2>✿ กำลังเรียนรู้ (LEARNING)</h2>
-    <ul class="learning-list" id="learning"></ul>
+    <ul class="learning" id="learning"></ul>
   </section>
+
+  <section>
+    <h2>✿ ผลงาน (WORKS)</h2>
+    <div class="works" id="works"></div>
+  </section>
+
+  <section>
+    <h2>✿ ข้อมูลการเชื่อมต่อของหน้านี้</h2>
+    <div class="panel">
+      <dl id="netpanel"></dl>
+      <p class="hint">กด F12 เลือกแท็บ Network แล้วกด Ctrl+F5 เพื่อเปรียบเทียบค่า</p>
+    </div>
+  </section>
+
+  <footer>
+    สร้างด้วย HTML, CSS และ JavaScript · โฮสต์บน GitHub Pages ·
+    <a id="repolink" href="https://github.com">ดูซอร์สโค้ดของหน้านี้</a>
+  </footer>
 </div>
 
 <script>
 const $ = (id) => document.getElementById(id);
 
-// แสดงผลข้อมูลจาก object ME
+/* ---------- 1) นำข้อมูลจากกล่อง ME มาแสดง ---------- */
 document.title = ME.name;
-$('top-img').src = ME.topImage;
-$('avatar').src = ME.avatarUrl;
-$('role').textContent = ME.role;
-$('name').textContent = ME.name;
-$('tagline').textContent = ME.tagline;
-$('about').textContent = ME.about;
+document.documentElement.dataset.theme = ME.theme || 'pink-sweet';
 
-// วนลูปสร้างปุ่ม ลิงก์
-for (const link of ME.links || []) {
-  const a = document.createElement('a');
-  a.href = link.url;
-  a.textContent = link.label;
-  a.target = "_blank";
-  const li = document.createElement('li');
-  li.appendChild(a);
-  $('links').appendChild(li);
+if ($('topBanner')) $('topBanner').src = ME.topBannerUrl || 'https://i.makeagif.com/media/8-28-2016/yD_T12.gif';
+$('role').textContent    = ME.role;
+$('name').textContent    = ME.name;
+$('tagline').textContent = ME.tagline;
+$('about').textContent   = ME.about;
+
+/* รูปโปรไฟล์ดึงจาก customAvatar หรือ GitHub อัตโนมัติ */
+const avatar = $('avatar');
+avatar.alt = 'รูปโปรไฟล์ของ ' + ME.name;
+avatar.addEventListener('error', () => {
+  const box = document.createElement('div');
+  box.className = 'avatar-fallback';
+  box.setAttribute('aria-hidden', 'true');
+  box.textContent = (ME.name || '?').trim().charAt(0);
+  avatar.replaceWith(box);
+});
+
+if (ME.customAvatar) {
+  avatar.src = ME.customAvatar;
+} else {
+  avatar.src = 'https://github.com/' + ME.github + '.png?size=192';
 }
 
-// วนลูปสร้างรายการ learning
 for (const item of ME.learning || []) {
   const li = document.createElement('li');
   li.textContent = item;
   $('learning').appendChild(li);
 }
+
+for (const link of ME.links || []) {
+  const a = document.createElement('a');
+  a.href = link.url;
+  a.textContent = link.label;
+  a.rel = 'noopener noreferrer';
+  a.target = '_blank';
+  const li = document.createElement('li');
+  li.appendChild(a);
+  $('links').appendChild(li);
+}
+
+/* ผลงาน */
+if (!ME.works || ME.works.length === 0) {
+  const box = document.createElement('div');
+  box.className = 'empty';
+  box.textContent = 'ยังไม่มีผลงานในหน้านี้ กำลังเรียนรู้อยู่ แล้วจะกลับมาเพิ่มเรื่อย ๆ นะคะ 💖';
+  $('works').appendChild(box);
+} else {
+  for (const w of ME.works) {
+    const card = document.createElement('div');
+    card.className = 'work';
+    const h3 = document.createElement('h3');
+    h3.textContent = w.title;
+    const p = document.createElement('p');
+    p.textContent = w.desc;
+    card.append(h3, p);
+    if (w.url) {
+      const a = document.createElement('a');
+      a.href = w.url;
+      a.textContent = 'ดูผลงาน ↗';
+      a.rel = 'noopener noreferrer';
+      a.target = '_blank';
+      card.appendChild(a);
+    }
+    $('works').appendChild(card);
+  }
+}
+
+$('repolink').href = 'https://github.com/' + ME.github + '/' + ME.github + '.github.io';
+
+/* ---------- 2) แผงข้อมูลการเชื่อมต่อ อ่านค่าจริงจาก Performance API ---------- */
+function ms(v) {
+  if (typeof v !== 'number' || v < 0 || Number.isNaN(v)) return '—';
+  return Math.round(v) + ' ms';
+}
+
+window.addEventListener('load', () => setTimeout(() => {
+  const nav = performance.getEntriesByType('navigation')[0];
+  const rows = [
+    ['Domain name', location.hostname || '(เปิดจากไฟล์ในเครื่อง)',
+     'ชื่อโดเมนต้องถูกแปลงเป็น IP address ผ่าน DNS ก่อน จึงจะติดต่อ server ได้'],
+    ['Protocol', location.protocol,
+     'https คือ HTTP ที่เพิ่มการเข้ารหัสและการยืนยันตัวตน server ด้วย certificate'],
+  ];
+  if (nav) rows.push(
+    ['HTTP version', nav.nextHopProtocol || '—',
+     'h2 คือ HTTP/2 และ h3 คือ HTTP/3 ซึ่งส่งหลายไฟล์พร้อมกันได้ในการเชื่อมต่อเดียว'],
+    ['DNS lookup', ms(nav.domainLookupEnd - nav.domainLookupStart),
+     'เวลาที่ใช้แปลงชื่อโดเมนเป็น IP address ถ้าได้ 0 ms แปลว่ามีคำตอบอยู่ใน cache แล้ว'],
+    ['Connection + TLS', ms(nav.connectEnd - nav.connectStart),
+     'เวลาสร้างการเชื่อมต่อ รวมขั้นตอน TLS handshake ก่อนเริ่มรับส่งข้อมูลจริง'],
+    ['TTFB', ms(nav.responseStart - nav.requestStart),
+     'Time To First Byte เวลาตั้งแต่ส่ง request จนได้ข้อมูลไบต์แรกกลับมา ยิ่ง server ไกลยิ่งสูง'],
+  );
+
+  for (const [label, value, note] of rows) {
+    const row = document.createElement('div');
+    row.className = 'row';
+    const dt = document.createElement('dt');
+    dt.textContent = label;
+    const dd = document.createElement('dd');
+    dd.textContent = value;
+    const small = document.createElement('span');
+    small.className = 'note';
+    small.textContent = note;
+    dd.appendChild(small);
+    row.append(dt, dd);
+    $('netpanel').appendChild(row);
+  }
+}, 0));
 </script>
 </body>
-</html>ห
+</html>
