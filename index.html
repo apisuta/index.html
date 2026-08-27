@@ -4,181 +4,252 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>web apisuta sanwong</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐰</text></svg>">
 
-<!-- ==========================================================================
-     "สวัสดีค่ะ ชื่อ อภิสุตา แสนวงศ์ นักศึกษาชั้นปีที่ 2 สาขาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน วิทยาเขตขอนแก่น มีความสนใจเกี่ยวกับการพัฒนาเว็บไซต์และการออกแบบ UI/UX ยินดีที่ได้รู้จักทุกคนค่ะ"
-     ========================================================================== -->
 <script>
 const ME = {
+  // GitHub username ของคุณ (หากยังไม่เปลี่ยน ระบบจะดึงรูปกระต่าย/ตัวอักษรแรกมาแสดง)
+  github: "apisuta-sanwong",
 
-  // GitHub username ของคุณ ใช้ดึงรูปโปรไฟล์มาแสดงอัตโนมัติ ไม่ต้องอัปโหลดรูปเอง
-  github: "your-username",
+  // ชื่อของคุณ
+  name: "อภิสุตา แสนวงศ์",
 
-  // ชื่อที่ต้องการให้แสดง ใช้ชื่อเล่นได้
-  name: "ชื่อของคุณ",
+  // ตำแหน่ง/การศึกษา
+  role: "นักศึกษาชั้นปีที่ 2 · สาขาวิศวกรรมคอมพิวเตอร์ · มทร.อีสาน วิทยาเขตขอนแก่น",
 
-  // บอกว่าคุณคือใคร สั้น ๆ
-  role: "นักศึกษาวิศวกรรมคอมพิวเตอร์ ปี 1 · มทร.อีสาน",
+  // ประโยคสั้นๆ บอกความสนใจ
+  tagline: "มีความสนใจเกี่ยวกับการพัฒนาเว็บไซต์และการออกแบบ UI/UX",
 
-  // หนึ่งประโยคว่าคุณสนใจสร้างอะไร เขียนให้เจาะจง อย่าเขียนกว้าง ๆ
-  // ไม่ดี: "รักการเขียนโปรแกรม"   ดี: "อยากทำระบบรดน้ำต้นไม้ที่ดูพยากรณ์อากาศก่อนรดน้ำ"
-  tagline: "หนึ่งประโยคว่าคุณสนใจสร้างอะไร",
+  // ประวัติแนะนำตัว
+  about: "สวัสดีค่ะ ชื่อ อภิสุตา แสนวงศ์ นักศึกษาชั้นปีที่ 2 สาขาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน วิทยาเขตขอนแก่น มีความสนใจเกี่ยวกับการพัฒนาเว็บไซต์และการออกแบบ UI/UX ยินดีที่ได้รู้จักทุกคนค่ะ ✨",
 
-  // แนะนำตัว 2-3 บรรทัด ว่ามาจากไหน สนใจอะไร กำลังจะไปทางไหน
-  about: "เขียนแนะนำตัวสัก 2-3 บรรทัด ว่าคุณมาจากไหน สนใจอะไรเป็นพิเศษ และอยากพัฒนาตัวเองไปทางไหน ไม่ต้องยาว ขอให้เป็นตัวคุณจริง ๆ",
-
-  // กำลังเรียนรู้อะไรอยู่ตอนนี้ ใส่ได้ 2-5 รายการ
+  // กำลังเรียนรู้อะไรอยู่ตอนนี้
   learning: [
     "พื้นฐานอินเทอร์เน็ตและบริการออนไลน์",
     "HTML และ CSS",
+    "การออกแบบ UI/UX และการพัฒนาเว็บไซต์",
     "การใช้ Git และ GitHub",
   ],
 
-  // ผลงาน ปี 1 เทอมแรกยังไม่มีก็ไม่เป็นไร ปล่อยว่างไว้ได้ หน้าเว็บจะขึ้นข้อความให้เอง
-  // เมื่อมีงานแล้วค่อยเพิ่มทีละชิ้น เช่น
-  // { title: "เครื่องวัดอุณหภูมิห้อง", desc: "ใช้ Arduino กับเซนเซอร์ DHT11", url: "" },
+  // ผลงาน
   works: [],
 
-  // ช่องทางติดต่อ ใช้ลิงก์สาธารณะเท่านั้น อย่าใส่เบอร์โทรหรืออีเมลส่วนตัว
+  // ช่องทางติดต่อ
   links: [
-    { label: "GitHub", url: "https://github.com/your-username" },
+    { label: "GitHub", url: "https://github.com/apisuta-sanwong" },
   ],
 
-  // ธีมสี เลือกหนึ่งอย่าง: "ocean" | "sunset" | "forest" | "grape" | "mono" | "mono-light"
-  theme: "ocean",
-
+  // ธีมสีชมพูหวานละมุน
+  theme: "pink-sweet",
 };
 </script>
 
 <style>
-/* ---------- สีพื้นฐาน ทุกธีมใช้ร่วมกัน ---------- */
-:root {
-  --bg:#0b1020; --line:#24304f; --text:#e8edf7; --muted:#93a1c0;
-  --surface:rgba(255,255,255,.05);      /* พื้นของการ์ดผลงานและแผงข้อมูล */
-  --mono: ui-monospace,"SF Mono",Menlo,Consolas,monospace;
-}
-
-/* ---------- ธีมสี เลือกได้ที่ช่อง theme ด้านบน ไม่ต้องแก้ตรงนี้ ----------
-   ห้าธีมแรกเปลี่ยนแค่สีเน้นกับแสงพื้นหลัง พื้นหลังยังเข้มเหมือนกันหมด
-   จึงไม่มีทางเลือกจนอ่านไม่ออก                                          */
+/* ---------- สีพื้นฐาน และธีมชมพูหวานละมุน (Pink Sweet) ---------- */
 :root,
-[data-theme="ocean"]  { --accent:#38bdf8; --accent-soft:#0ea5e9; --glow1:#1d2a52; --glow2:#10305c; }
-[data-theme="sunset"] { --accent:#fb923c; --accent-soft:#f97316; --glow1:#4a2418; --glow2:#5c2b10; }
-[data-theme="forest"] { --accent:#34d399; --accent-soft:#10b981; --glow1:#14342a; --glow2:#0f3d2e; }
-[data-theme="grape"]  { --accent:#c084fc; --accent-soft:#a855f7; --glow1:#2e1d52; --glow2:#3d1a5c; }
-[data-theme="mono"]   { --accent:#e2e8f0; --accent-soft:#cbd5e1; --glow1:#1e293b; --glow2:#0f172a; }
-
-/* ธีมเดียวที่พลิกเป็นพื้นสว่าง จึงต้องเขียนยาวกว่าเพื่อน
-   เพราะต้องกลับค่าพื้นหลัง ตัวอักษร เส้น และพื้นการ์ดใหม่ทั้งชุด */
-[data-theme="mono-light"] {
-  --accent:#334155; --accent-soft:#475569; --glow1:#dbe3ee; --glow2:#e6ebf3;
-  --bg:#f7f9fc; --line:#ccd6e4; --text:#0f172a; --muted:#52627d;
-  --surface:rgba(15,23,42,.04);
+[data-theme="pink-sweet"] {
+  --bg: #fff0f5;             /* สีพื้นหลังชมพูอ่อนละมุน LavenderBlush */
+  --line: #fbcfe8;           /* เส้นขอบสีชมพูพาสเทล */
+  --text: #831843;           /* สีตัวอักษรชมพูเข้ม อ่านง่ายชัดเจน */
+  --muted: #9d174d;          /* สีข้อความรองชมพูเข้มโทนอุ่น */
+  --accent: #ec4899;         /* สีเน้นชมพูสดใส */
+  --accent-soft: #f43f5e;    /* สีเน้นรอง */
+  --surface: rgba(255, 255, 255, 0.75); /* พื้นหลังการ์ดโปร่งแสงโทนขาวนวล */
+  --glow1: #ffe4e6;
+  --glow2: #fce7f3;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
 
 *{ box-sizing:border-box }
 
-body{
-  margin:0; min-height:100vh; color:var(--text);
-  font-family:"Segoe UI","Noto Sans Thai",system-ui,sans-serif;
-  line-height:1.75;                       /* ระยะห่างระหว่างบรรทัด อ่านง่ายขึ้นมาก */
+body {
+  margin: 0; min-height: 100vh; color: var(--text);
+  font-family: "Segoe UI", "Noto Sans Thai", system-ui, sans-serif;
+  line-height: 1.75;
   background:
-    radial-gradient(1000px 460px at 12% -10%, var(--glow1) 0, transparent 60%),
-    radial-gradient(820px 400px at 92% 0,   var(--glow2) 0, transparent 55%),
+    radial-gradient(1000px 500px at 20% -10%, #fde2e4 0, transparent 70%),
+    radial-gradient(800px 400px at 80% 100%, #fff1e6 0, transparent 70%),
     var(--bg);
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* ความกว้างจำกัดไว้ ไม่ให้บรรทัดยาวจนตาไล่ไม่ทัน */
-.wrap{ max-width:760px; margin:0 auto; padding:0 22px 80px }
+/* ---------- เอฟเฟกต์วิ้งๆ ฟรุ้งฟริ้ง (Sparkles Animation) ---------- */
+.sparkle-container {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 10px #f472b6, 0 0 20px #f472b6;
+  animation: float-sparkle 4s infinite ease-in-out;
+  opacity: 0;
+}
+
+@keyframes float-sparkle {
+  0% { transform: translateY(0) scale(0); opacity: 0; }
+  50% { opacity: 0.8; transform: translateY(-30px) scale(1.2); }
+  100% { transform: translateY(-60px) scale(0); opacity: 0; }
+}
+
+.sparkle:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+.sparkle:nth-child(2) { top: 30%; left: 85%; animation-delay: 1s; }
+.sparkle:nth-child(3) { top: 60%; left: 10%; animation-delay: 2s; }
+.sparkle:nth-child(4) { top: 75%; left: 75%; animation-delay: 1.5s; }
+.sparkle:nth-child(5) { top: 40%; left: 50%; animation-delay: 2.5s; }
+.sparkle:nth-child(6) { top: 85%; left: 30%; animation-delay: 0.5s; }
+
+/* ---------- กระต่าย Snowball ดุ๊กดิ๊กน่ารัก ---------- */
+.snowball-corner {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 110px;
+  height: auto;
+  z-index: 99;
+  filter: drop-shadow(0 4px 8px rgba(236, 72, 153, 0.25));
+  transition: transform 0.3s ease;
+}
+
+.snowball-corner:hover {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.snowball-inline {
+  display: block;
+  margin: 10px auto 0;
+  width: 90px;
+  height: auto;
+}
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 22px 80px; position: relative; z-index: 1; }
 
 /* ---------- ส่วนหัว ---------- */
-.hero{ display:flex; gap:22px; align-items:center; padding:64px 0 8px; flex-wrap:wrap }
-.avatar{
-  width:96px; height:96px; border-radius:50%;
-  border:2px solid var(--accent); object-fit:cover; flex-shrink:0;
-  background:var(--surface);
+.hero { display: flex; gap: 22px; align-items: center; padding: 64px 0 8px; flex-wrap: wrap; }
+.avatar {
+  width: 96px; height: 96px; border-radius: 50%;
+  border: 3px solid var(--accent); object-fit: cover; flex-shrink: 0;
+  background: var(--surface);
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.2);
 }
-/* ใช้แทนรูปโปรไฟล์ เมื่อโหลดรูปจาก GitHub ไม่สำเร็จ */
-.avatar-fallback{
-  width:96px; height:96px; border-radius:50%; flex-shrink:0;
-  border:2px solid var(--accent); background:var(--surface);
-  display:flex; align-items:center; justify-content:center;
-  font-size:38px; font-weight:600; color:var(--accent);
+.avatar-fallback {
+  width: 96px; height: 96px; border-radius: 50%; flex-shrink: 0;
+  border: 3px solid var(--accent); background: var(--surface);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 38px; font-weight: 600; color: var(--accent);
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.2);
 }
-.hero-text{ flex:1; min-width:240px }
-.role{
-  font:600 12px/1 var(--mono); letter-spacing:.14em;
-  text-transform:uppercase; color:var(--accent); margin:0 0 8px;
+.hero-text { flex: 1; min-width: 240px; }
+.role {
+  font: 600 12px/1 var(--mono); letter-spacing: .14em;
+  text-transform: uppercase; color: var(--accent); margin: 0 0 8px;
 }
-h1{ font-size:clamp(30px,6vw,46px); line-height:1.15; margin:0 0 8px; letter-spacing:-.02em }
-.tagline{ font-size:clamp(17px,2.6vw,20px); color:var(--text); margin:0; opacity:.92 }
+h1 { font-size: clamp(30px, 6vw, 46px); line-height: 1.15; margin: 0 0 8px; letter-spacing: -.02em; color: #831843; }
+.tagline { font-size: clamp(17px, 2.6vw, 20px); color: var(--text); margin: 0; opacity: .92; }
 
-.about{ color:var(--muted); margin:26px 0 0; max-width:62ch }
+.about { color: var(--muted); margin: 26px 0 0; max-width: 62ch; }
 
 /* ---------- ปุ่มลิงก์ ---------- */
-.links{ display:flex; flex-wrap:wrap; gap:10px; padding:0; margin:24px 0 0; list-style:none }
-.links a{
-  display:inline-block; border:1px solid var(--line); border-radius:999px;
-  padding:9px 20px; color:var(--text); text-decoration:none; font-size:15px;
-  transition:border-color .15s ease, color .15s ease;
+.links { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 24px 0 0; list-style: none; }
+.links a {
+  display: inline-block; border: 1.5px solid var(--line); border-radius: 999px;
+  padding: 9px 20px; color: var(--text); text-decoration: none; font-size: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+  transition: all .2s ease;
 }
-.links a:hover, .links a:focus-visible{ border-color:var(--accent); color:var(--accent) }
+.links a:hover, .links a:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.15);
+}
 
 /* ---------- หัวข้อของแต่ละส่วน ---------- */
-section{ margin-top:52px }
-h2{
-  font:600 12px/1 var(--mono); letter-spacing:.16em; text-transform:uppercase;
-  color:var(--muted); border-bottom:1px solid var(--line);
-  padding-bottom:10px; margin:0 0 20px;
+section { margin-top: 52px; }
+h2 {
+  font: 600 13px/1 var(--mono); letter-spacing: .16em; text-transform: uppercase;
+  color: var(--accent); border-bottom: 2px solid var(--line);
+  padding-bottom: 10px; margin: 0 0 20px;
 }
 
 /* ---------- รายการกำลังเรียนรู้ ---------- */
-.learning{ list-style:none; padding:0; margin:0 }
-.learning li{
-  border-left:2px solid var(--accent); padding:2px 0 2px 16px;
-  margin-bottom:14px; color:var(--muted);
+.learning { list-style: none; padding: 0; margin: 0; }
+.learning li {
+  border-left: 3px solid var(--accent); padding: 8px 16px;
+  margin-bottom: 14px; color: var(--muted);
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 2px 8px rgba(251, 207, 232, 0.2);
 }
 
 /* ---------- ผลงาน ---------- */
-.works{ display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)) }
-.work{
-  border:1px solid var(--line); border-radius:12px; padding:16px 18px;
-  background:var(--surface);
+.works { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.work {
+  border: 1px solid var(--line); border-radius: 16px; padding: 18px;
+  background: var(--surface);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(251, 207, 232, 0.3);
+  transition: transform 0.2s ease;
 }
-.work h3{ margin:0 0 6px; font-size:17px }
-.work p{ margin:0; color:var(--muted); font-size:14.5px }
-.work a{ color:var(--accent); text-decoration:none; font-size:14px; display:inline-block; margin-top:10px }
-.work a:hover{ text-decoration:underline }
-.empty{
-  border:1px dashed var(--line); border-radius:12px; padding:26px 20px;
-  color:var(--muted); text-align:center; font-size:15px;
+.work:hover { transform: translateY(-3px); }
+.work h3 { margin: 0 0 6px; font-size: 17px; color: var(--text); }
+.work p { margin: 0; color: var(--muted); font-size: 14.5px; }
+.work a { color: var(--accent); text-decoration: none; font-size: 14px; display: inline-block; margin-top: 10px; font-weight: 600; }
+.work a:hover { text-decoration: underline; }
+.empty {
+  border: 2px dashed var(--line); border-radius: 16px; padding: 26px 20px;
+  color: var(--muted); text-align: center; font-size: 15px;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 /* ---------- แผงข้อมูลการเชื่อมต่อ ---------- */
-.panel{ border:1px solid var(--line); border-radius:14px; background:var(--surface); padding:4px 20px 16px }
-.row{
-  display:grid; grid-template-columns:minmax(130px,1fr) minmax(0,1.5fr); gap:12px;
-  padding:11px 0; border-bottom:1px dashed var(--line); align-items:baseline;
+.panel { border: 1px solid var(--line); border-radius: 16px; background: var(--surface); padding: 4px 20px 16px; backdrop-filter: blur(8px); }
+.row {
+  display: grid; grid-template-columns: minmax(130px, 1fr) minmax(0, 1.5fr); gap: 12px;
+  padding: 11px 0; border-bottom: 1px dashed var(--line); align-items: baseline;
 }
-.row:last-of-type{ border-bottom:0 }
-.row dt{ color:var(--muted); font-size:14px; margin:0 }
-.row dd{ margin:0; font-family:var(--mono); font-size:14px; color:var(--accent); word-break:break-all }
-.row .note{ display:block; color:var(--muted); font-family:inherit; font-size:12.5px }
-.hint{ color:var(--muted); font-size:14px; margin:14px 0 0 }
+.row:last-of-type { border-bottom: 0; }
+.row dt { color: var(--muted); font-size: 14px; margin: 0; font-weight: 600; }
+.row dd { margin: 0; font-family: var(--mono); font-size: 14px; color: var(--accent); word-break: break-all; }
+.row .note { display: block; color: var(--muted); font-family: inherit; font-size: 12.5px; }
+.hint { color: var(--muted); font-size: 14px; margin: 14px 0 0; }
 
-footer{ margin-top:56px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:14px }
-footer a{ color:var(--accent) }
+footer { margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+footer a { color: var(--accent); font-weight: 600; }
 
-/* ---------- จอมือถือ ---------- */
-@media (max-width:520px){
-  .hero{ padding-top:44px; gap:16px }
-  .avatar, .avatar-fallback{ width:72px; height:72px; font-size:28px }
-  .row{ grid-template-columns:1fr; gap:2px }
+@media (max-width: 520px) {
+  .hero { padding-top: 44px; gap: 16px; }
+  .avatar, .avatar-fallback { width: 72px; height: 72px; font-size: 28px; }
+  .row { grid-template-columns: 1fr; gap: 2px; }
+  .snowball-corner { width: 80px; bottom: 10px; right: 10px; }
 }
 </style>
 </head>
 <body>
+
+<!-- เอฟเฟกต์วิ้งๆ ฟรุ้งฟริ้ง -->
+<div class="sparkle-container">
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+</div>
+
+<!-- น้องกระต่าย Snowball ดุ๊กดิ๊กมุมขวาล่าง -->
+<img class="snowball-corner" src="https://media.tenor.com/On705C3p1a4AAAAi/snowball-rabbit.gif" alt="Snowball Rabbit GIF">
+
 <div class="wrap">
 
   <header class="hero">
@@ -193,19 +264,17 @@ footer a{ color:var(--accent) }
   <ul class="links" id="links"></ul>
 
   <section>
-    <h2>กำลังเรียนรู้</h2>
+    <h2>กำลังเรียนรู้ ✨</h2>
     <ul class="learning" id="learning"></ul>
   </section>
 
   <section>
-    <h2>ผลงาน</h2>
+    <h2>ผลงาน 🎀</h2>
     <div class="works" id="works"></div>
   </section>
 
-  <!-- ค่าทุกตัวในแผงนี้ browser วัดจากการโหลดหน้านี้จริง ไม่ได้เขียนค้างไว้
-       เปรียบเทียบกับ DevTools (F12) แท็บ Network ได้ ค่าควรสอดคล้องกัน -->
   <section>
-    <h2>ข้อมูลการเชื่อมต่อของหน้านี้</h2>
+    <h2>ข้อมูลการเชื่อมต่อของหน้านี้ 🌸</h2>
     <div class="panel">
       <dl id="netpanel"></dl>
       <p class="hint">กด F12 เลือกแท็บ Network แล้วกด Ctrl+F5 เพื่อเปรียบเทียบค่า</p>
@@ -221,81 +290,106 @@ footer a{ color:var(--accent) }
 <script>
 const $ = (id) => document.getElementById(id);
 
-/* ---------- 1) นำข้อมูลจากกล่อง ME มาแสดง ---------- */
-document.title = ME.name;
-document.documentElement.dataset.theme = ME.theme || 'ocean';
+function initPage() {
+  /* ---------- 1) นำข้อมูลจากกล่อง ME มาแสดง ---------- */
+  document.title = ME.name;
+  document.documentElement.dataset.theme = ME.theme || 'pink-sweet';
 
-$('role').textContent    = ME.role;
-$('name').textContent    = ME.name;
-$('tagline').textContent = ME.tagline;
-$('about').textContent   = ME.about;
+  if ($('role')) $('role').textContent    = ME.role;
+  if ($('name')) $('name').textContent    = ME.name;
+  if ($('tagline')) $('tagline').textContent = ME.tagline;
+  if ($('about')) $('about').textContent   = ME.about;
 
-/* รูปโปรไฟล์ดึงจาก GitHub อัตโนมัติ ไม่ต้องอัปโหลดรูปเอง
-   ถ้าโหลดไม่สำเร็จ (พิมพ์ username ผิด หรือเน็ตมีปัญหา) จะแสดงตัวอักษรแรกของชื่อแทน
-   หน้าเว็บจะได้ไม่มีรูปแตกค้างอยู่ */
-const avatar = $('avatar');
-avatar.alt = 'รูปโปรไฟล์ของ ' + ME.name;
-avatar.addEventListener('error', () => {
-  const box = document.createElement('div');
-  box.className = 'avatar-fallback';
-  box.setAttribute('aria-hidden', 'true');
-  box.textContent = (ME.name || '?').trim().charAt(0);
-  avatar.replaceWith(box);
-});
-avatar.src = 'https://github.com/' + ME.github + '.png?size=192';
-
-for (const item of ME.learning || []) {
-  const li = document.createElement('li');
-  li.textContent = item;          // ใช้ textContent เสมอ ปลอดภัยกว่า innerHTML
-  $('learning').appendChild(li);
-}
-
-for (const link of ME.links || []) {
-  const a = document.createElement('a');
-  a.href = link.url;
-  a.textContent = link.label;
-  a.rel = 'noopener noreferrer';
-  const li = document.createElement('li');
-  li.appendChild(a);
-  $('links').appendChild(li);
-}
-
-/* ผลงานยังว่างได้ ปี 1 เทอมแรกเป็นเรื่องปกติ */
-if (!ME.works || ME.works.length === 0) {
-  const box = document.createElement('div');
-  box.className = 'empty';
-  box.textContent = 'ยังไม่มีผลงานในหน้านี้ กำลังเรียนรู้อยู่ แล้วจะกลับมาเพิ่มเรื่อย ๆ';
-  $('works').appendChild(box);
-} else {
-  for (const w of ME.works) {
-    const card = document.createElement('div');
-    card.className = 'work';
-    const h3 = document.createElement('h3');
-    h3.textContent = w.title;
-    const p = document.createElement('p');
-    p.textContent = w.desc;
-    card.append(h3, p);
-    if (w.url) {
-      const a = document.createElement('a');
-      a.href = w.url;
-      a.textContent = 'ดูผลงาน ↗';
-      a.rel = 'noopener noreferrer';
-      card.appendChild(a);
+  /* รูปโปรไฟล์ดึงจาก GitHub อัตโนมัติ */
+  const avatar = $('avatar');
+  if (avatar) {
+    avatar.alt = 'รูปโปรไฟล์ของ ' + ME.name;
+    avatar.addEventListener('error', () => {
+      const box = document.createElement('div');
+      box.className = 'avatar-fallback';
+      box.setAttribute('aria-hidden', 'true');
+      box.textContent = (ME.name || '?').trim().charAt(0);
+      avatar.replaceWith(box);
+    });
+    if (ME.github && ME.github !== 'your-username') {
+      avatar.src = 'https://github.com/' + ME.github + '.png?size=192';
+    } else {
+      avatar.dispatchEvent(new Event('error'));
     }
-    $('works').appendChild(card);
+  }
+
+  if ($('learning')) {
+    $('learning').innerHTML = '';
+    for (const item of ME.learning || []) {
+      const li = document.createElement('li');
+      li.textContent = item;
+      $('learning').appendChild(li);
+    }
+  }
+
+  if ($('links')) {
+    $('links').innerHTML = '';
+    for (const link of ME.links || []) {
+      const a = document.createElement('a');
+      a.href = link.url;
+      a.textContent = link.label;
+      a.rel = 'noopener noreferrer';
+      const li = document.createElement('li');
+      li.appendChild(a);
+      $('links').appendChild(li);
+    }
+  }
+
+  /* แสดงกล่องผลงานพร้อมรูปกระต่ายสโนว์บอล */
+  if ($('works')) {
+    $('works').innerHTML = '';
+    if (!ME.works || ME.works.length === 0) {
+      const box = document.createElement('div');
+      box.className = 'empty';
+      box.innerHTML = 'ยังไม่มีผลงานในหน้านี้ กำลังเรียนรู้อยู่ แล้วจะกลับมาเพิ่มเรื่อย ๆ น้า 💖<br><img class="snowball-inline" src="https://media.tenor.com/On705C3p1a4AAAAi/snowball-rabbit.gif" alt="Snowball Rabbit">';
+      $('works').appendChild(box);
+    } else {
+      for (const w of ME.works) {
+        const card = document.createElement('div');
+        card.className = 'work';
+        const h3 = document.createElement('h3');
+        h3.textContent = w.title;
+        const p = document.createElement('p');
+        p.textContent = w.desc;
+        card.append(h3, p);
+        if (w.url) {
+          const a = document.createElement('a');
+          a.href = w.url;
+          a.textContent = 'ดูผลงาน ↗';
+          a.rel = 'noopener noreferrer';
+          card.appendChild(a);
+        }
+        $('works').appendChild(card);
+      }
+    }
+  }
+
+  if ($('repolink')) {
+    $('repolink').href = 'https://github.com/' + ME.github + '/' + ME.github + '.github.io';
   }
 }
 
-$('repolink').href = 'https://github.com/' + ME.github + '/' + ME.github + '.github.io';
+// เรียกให้สคริปต์ทำงานหลังจาก DOM โหลดเสร็จเรียบร้อยแล้ว
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPage);
+} else {
+  initPage();
+}
 
 /* ---------- 2) แผงข้อมูลการเชื่อมต่อ อ่านค่าจริงจาก Performance API ---------- */
 function ms(v) {
-  /* 0 ms ไม่ได้แปลว่าไม่มีค่า แต่แปลว่า browser ข้ามขั้นนั้นเพราะมีข้อมูลใน cache อยู่แล้ว */
   if (typeof v !== 'number' || v < 0 || Number.isNaN(v)) return '—';
   return Math.round(v) + ' ms';
 }
 
 window.addEventListener('load', () => setTimeout(() => {
+  if (!$('netpanel')) return;
+  $('netpanel').innerHTML = '';
   const nav = performance.getEntriesByType('navigation')[0];
   const rows = [
     ['Domain name', location.hostname || '(เปิดจากไฟล์ในเครื่อง)',
